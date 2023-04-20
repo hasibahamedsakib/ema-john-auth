@@ -1,0 +1,52 @@
+.login-container {
+  width: 500px;
+  /* height: 600px; */
+  margin: 100px auto;
+  background: #ffffff;
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: -12px 12px 2px #ff99004d;
+}
+.input-layer {
+}
+.input-layer > input {
+  margin-top: 10px;
+  width: 415px;
+  height: 55px;
+  display: block;
+  border: 1px solid #95a0a7;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  font-size: 17px;
+}
+.login-btn {
+  width: 415px;
+  height: 55px;
+  background: #ff99004d;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+hr {
+  margin: 40px 0;
+}
+
+.continue-google {
+  width: 415px;
+  height: 55px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 17px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 0;
+}
