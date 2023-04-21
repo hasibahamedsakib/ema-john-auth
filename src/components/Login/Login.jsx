@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import "./login.css";
 
 const Login = () => {
   const [error, setError] = useState("");
   const { userLogIn } = useContext(AuthContext);
-
+  const navigate = useNavigate();
   const handleLogIn = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -16,6 +16,8 @@ const Login = () => {
       .then((result) => {
         const loginUser = result.user;
         console.log(loginUser);
+        alert("Login SuccessFull");
+        navigate("/");
       })
       .catch((err) => setError(err.message));
   };

@@ -24,3 +24,16 @@
   text-decoration: none;
   color: #fff;
 }
+.logout-btn {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 6px 12px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.logout-btn:hover {
+  background: rgb(242, 239, 235);
+  color: black;
+}

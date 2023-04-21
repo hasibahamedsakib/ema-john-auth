@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Register = () => {
   const { userSignUp } = useContext(AuthContext);
   const [error, setError] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -26,6 +26,8 @@ const Register = () => {
       .then((result) => {
         const createUser = result.user;
         console.log(createUser);
+        alert("user created.Please Login");
+        navigate("/login");
       })
       .catch((err) => setError(err.message));
   };
