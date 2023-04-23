@@ -19,7 +19,7 @@ const Login = () => {
       .then((result) => {
         const loginUser = result.user;
         console.log(loginUser);
-        alert("Login SuccessFull");
+
         navigate(from, { replace: true });
       })
       .catch((err) => setError(err.message));

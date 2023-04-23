@@ -21,7 +21,9 @@ const Header = () => {
 
           {users && users ? (
             <>
-              <p>{users.email}</p>
+              <p style={{ fontFamily: "cursive", fontWeight: "bold" }}>
+                {users?.displayName ? users?.displayName : users.email}
+              </p>
               <button className="logout-btn" onClick={() => userLogOut()}>
                 SignOut
               </button>

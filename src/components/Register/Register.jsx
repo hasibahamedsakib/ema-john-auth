@@ -1,3 +1,4 @@
+import { updateProfile } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -9,6 +10,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
+    const username = e.target.username.value;
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
 
@@ -26,6 +28,9 @@ const Register = () => {
       .then((result) => {
         const createUser = result.user;
         console.log(createUser);
+        updateProfile(createUser, {
+          displayName: username,
+        }).then(() => console.log("name added"));
         alert("user created.Please Login");
         navigate("/login");
       })
@@ -43,6 +48,10 @@ const Register = () => {
         Sign Up
       </h3>
       <form onSubmit={handleSubmit}>
+        <div className="input-layer">
+          <label htmlFor="">User Name</label>
+          <input type="text" name="username" id="" required />
+        </div>
         <div className="input-layer">
           <label htmlFor="">Email</label>
           <input type="email" name="email" id="" required />
