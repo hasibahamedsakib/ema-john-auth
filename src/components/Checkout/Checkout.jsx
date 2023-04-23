@@ -1,14 +1,14 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-const Inventory = () => {
+const Checkout = () => {
   const location = useLocation();
   console.log(location);
   return (
     <div>
-      <h1>Inventory page</h1>
+      <h1>checkout route</h1>
     </div>
   );
 };
 
-export default Inventory;
+export default Checkout;

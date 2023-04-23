@@ -5,6 +5,7 @@ import logo from "../../images/Logo.svg";
 import "./Header.css";
 const Header = () => {
   const { users, userLogOut } = useContext(AuthContext);
+  // console.log(users);
   return (
     <div className="header">
       <nav className="nav-bar">
